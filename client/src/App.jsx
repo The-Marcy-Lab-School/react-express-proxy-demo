@@ -2,6 +2,21 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import {Routes, Route} from 'react-router-dom';
 
+const UsersPage = () => {
+  return (
+    <h1>Users</h1>
+  )
+}
+
+const HomePage = ({ data }) => {
+  return (
+    <>
+      <h1>Hello World!!!!</h1>
+      <p>Message from server: {data.msg}</p>
+    </>
+  )
+}
+
 function App() {
 
   const [data, setData] = useState({});
@@ -22,14 +37,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={(
-          <>
-            <h1>Hello World!!!! Its ben</h1>
-            <p>Message from server: {data.msg}</p>
-          </>
-        )} />
-        <Route path='/users' element={<h1>Users</h1>} />
-      
+        <Route path="/" element={<HomePage />} />
+        <Route path='/users' element={<UsersPage data={data}/>} />
       </Routes>
     </>
   )
