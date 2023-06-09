@@ -6,7 +6,7 @@
 2. `npm i` from the root directory to install the dependencies
 3. `cd` into the `client/` folder and `npm i` to install the front-end dependencies
 4. `npm run dev` from the `client/` folder to start the Vite development server
-5. `cd` back into the root directory and run `npm run dev` to start the back-end server
+5. In a separate terminal, from the root directory, run `npm run dev` to start the back-end server
 
 Run `npm run build` from the `client/` folder to generate static assets from the front-end for the back-end to directly serve.
 
